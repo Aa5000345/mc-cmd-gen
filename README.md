@@ -214,6 +214,7 @@ selected_container / selected_map`，显示在联动总线抽屉与状态栏右�
 `MCStudio-<版本>-win64.zip`，解压后双击 `MCStudio.exe` 即可 —— 绿色版，
 不需要装 Python。首次启动会在 `%LOCALAPPDATA%\mcstudio\` 建立数据目录
 （也可以用环境变量 `MCSTUDIO_DATA_DIR` 指定，方便放 U 盘里随身带）。
+各版本变更见 [CHANGELOG.md](CHANGELOG.md)。
 
 启动不来时用它自带的诊断：
 
