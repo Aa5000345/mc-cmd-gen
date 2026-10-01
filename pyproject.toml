@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mcstudio"
-version = "2.0.0"
+version = "2.1.0"
 description = "MCStudio（MC 工坊）— Minecraft Java 1.21.1 命令生成器与世界 / NBT 编辑器"
 readme = "README.md"
 requires-python = ">=3.10"

@@ -208,6 +208,30 @@ selected_container / selected_map`，显示在联动总线抽屉与状态栏右�
 
 ## 安装
 
+### 0. 直接用打包版（Windows，推荐）
+
+到 [Releases](https://github.com/Aa5000345/mc-cmd-gen/releases) 下载
+`MCStudio-<版本>-win64.zip`，解压后双击 `MCStudio.exe` 即可 —— 绿色版，
+不需要装 Python。首次启动会在 `%LOCALAPPDATA%\mcstudio\` 建立数据目录
+（也可以用环境变量 `MCSTUDIO_DATA_DIR` 指定，方便放 U 盘里随身带）。
+
+启动不来时用它自带的诊断：
+
+```bat
+set MCSTUDIO_SELFTEST=1
+MCStudio.exe
+```
+
+会逐条打印「数据目录 / 内置数据 / 命令注册表 / nbtlib / sqlite3 / Qt / 主窗口」
+的检查结果，哪一步缺文件一眼就能看出来。
+
+自己打包发行版：
+
+```bash
+python tools/build_release.py            # 产出 dist/MCStudio/ 与 dist/MCStudio-<版本>-win64.zip
+python tools/build_release.py --console  # 保留控制台窗口，排查启动问题用
+```
+
 ### 1. 安装 Python
 
 需要 Python 3.10 或更高版本。

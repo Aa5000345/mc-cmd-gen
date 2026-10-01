@@ -52,7 +52,7 @@ CLI_NAME_LEGACY = "mc-cmd-gen"
 APP_ID = "MCStudio"
 ORG_NAME = "MCStudio"
 
-VERSION = "2.0.0"
+VERSION = "2.1.0"
 
 #: 目标 Minecraft 版本
 TARGET_MC_VERSION = "1.21.1"
