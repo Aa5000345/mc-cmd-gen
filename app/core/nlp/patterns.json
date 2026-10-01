@@ -1,0 +1,149 @@
+{
+  "version": "1.21.1",
+  "patterns": [
+    {
+      "id": "give_item",
+      "regex": "^给\\s*(?P<target>.+?)\\s*(?P<count>\\d+)\\s*个\\s*(?P<item>.+)$",
+      "template": "give {target} {item} {count}",
+      "desc": "给某人 N 个物品"
+    },
+    {
+      "id": "give_item_one",
+      "regex": "^给\\s*(?P<target>.+?)\\s*(?:一个|一块|一把)\\s*(?P<item>.+)$",
+      "template": "give {target} {item} 1",
+      "desc": "给某人一个物品"
+    },
+    {
+      "id": "effect_give",
+      "regex": "^给\\s*(?P<target>.+?)\\s*(?:添加|加上|施加)\\s*(?P<effect>.+?)\\s*效果\\s*(?P<duration>\\d+)\\s*秒(?:\\s*(?P<amplifier>\\d+)\\s*级)?$",
+      "template": "effect give {target} {effect} {duration} {amplifier}",
+      "desc": "给某人添加状态效果"
+    },
+    {
+      "id": "effect_clear",
+      "regex": "^清除\\s*(?P<target>.+?)\\s*(?:的)?\\s*(?:所有)?\\s*效果$",
+      "template": "effect clear {target}",
+      "desc": "清除状态效果"
+    },
+    {
+      "id": "tp_to_coord",
+      "regex": "^把\\s*(?P<target>.+?)\\s*传送到\\s*(?P<x>\\S+)\\s+(?P<y>\\S+)\\s+(?P<z>\\S+)$",
+      "template": "tp {target} {x} {y} {z}",
+      "desc": "把目标传送到坐标"
+    },
+    {
+      "id": "particle_here",
+      "regex": "^(?:生成|播放|显示)\\s*(?P<name>.+?)\\s*粒子(?:\\s*在?\\s*(?P<pos>\\S+\\s+\\S+\\s+\\S+))?$",
+      "template": "particle {name} {pos} 0 0 0 1 1",
+      "desc": "生成粒子（坐标可省略）"
+    },
+    {
+      "id": "particle_at",
+      "regex": "^在\\s*(?P<x>\\S+)\\s+(?P<y>\\S+)\\s+(?P<z>\\S+)\\s*(?:生成|播放|显示)\\s*(?P<name>.+?)\\s*粒子$",
+      "template": "particle {name} {x} {y} {z} 0 0 0 1 1",
+      "desc": "在坐标生成粒子"
+    },
+    {
+      "id": "summon_at",
+      "regex": "^在\\s*(?P<x>\\S+)\\s+(?P<y>\\S+)\\s+(?P<z>\\S+)\\s*(?:生成|召唤)\\s*(?:一只|一个|一匹|一头)?\\s*(?P<entity>.+)$",
+      "template": "summon {entity} {x} {y} {z}",
+      "desc": "在坐标生成实体"
+    },
+    {
+      "id": "summon_here",
+      "regex": "^(?:生成|召唤)\\s*(?:一只|一个|一匹|一头)?\\s*(?P<entity>.+)$",
+      "template": "summon {entity} ~ ~ ~",
+      "desc": "在当前位置生成实体"
+    },
+    {
+      "id": "setblock_at",
+      "regex": "^在\\s*(?P<x>\\S+)\\s+(?P<y>\\S+)\\s+(?P<z>\\S+)\\s*(?:放置|放|设置)\\s*(?:一个|一块)?\\s*(?P<block>.+?)(?:方块)?$",
+      "template": "setblock {x} {y} {z} {block}",
+      "desc": "在坐标放置方块"
+    },
+    {
+      "id": "fill_area",
+      "regex": "^用\\s*(?P<block>.+?)\\s*填充\\s*(?P<x1>\\S+)\\s+(?P<y1>\\S+)\\s+(?P<z1>\\S+)\\s*到\\s*(?P<x2>\\S+)\\s+(?P<y2>\\S+)\\s+(?P<z2>\\S+)$",
+      "template": "fill {x1} {y1} {z1} {x2} {y2} {z2} {block}",
+      "desc": "用方块填充区域"
+    },
+    {
+      "id": "kill_all",
+      "regex": "^杀死所有\\s*(?P<entity>.+)$",
+      "template": "kill @e[type={entity}]",
+      "desc": "杀死所有某类实体"
+    },
+    {
+      "id": "gamemode_set",
+      "regex": "^把\\s*(?P<target>.+?)\\s*(?:设|设置|改)\\s*(?:成)?\\s*(?P<mode>生存|创造|冒险|旁观者?)模式?$",
+      "template": "gamemode {mode} {target}",
+      "desc": "设置游戏模式"
+    },
+    {
+      "id": "weather_set",
+      "regex": "^(?:把)?\\s*(?:天气)?\\s*(?:设|设置|改)?\\s*(?:成)?\\s*(?P<type>晴天|下雨|雨|雷暴|雷雨|打雷)(?:天气)?(?:\\s*(?P<duration>\\d+)\\s*秒)?$",
+      "template": "weather {type} {duration}",
+      "desc": "设置天气"
+    },
+    {
+      "id": "time_set",
+      "regex": "^(?:把)?\\s*(?:时间|时间点)?\\s*(?:设|设置|改)?\\s*(?:成)?\\s*(?P<value>白天|正午|夜晚|午夜|day|noon|night|midnight)$",
+      "template": "time set {value}",
+      "desc": "设置时间"
+    },
+    {
+      "id": "time_add",
+      "regex": "^(?:时间)?\\s*(?:增加|加)\\s*(?P<amount>\\d+)\\s*(?:刻|tick)$",
+      "template": "time add {amount}",
+      "desc": "增加游戏时间"
+    },
+    {
+      "id": "difficulty_set",
+      "regex": "^(?:把)?\\s*(?:难度)?\\s*(?:设|设置|改)?\\s*(?:成)?\\s*(?P<level>和平|简单|普通|困难)(?:难度)?$",
+      "template": "difficulty {level}",
+      "desc": "设置难度"
+    },
+    {
+      "id": "tell_message",
+      "regex": "^(?:对|向|给)\\s*(?P<target>.+?)\\s*(?:说|发送消息|私聊)\\s*[\"“]?(?P<text>[^\"”]+?)[\"”]?$",
+      "template": "tellraw {target} {{\"text\":\"{text}\"}}",
+      "desc": "给某人发送消息"
+    },
+    {
+      "id": "say_message",
+      "regex": "^(?:广播|全服公告|公告)\\s*[\"“]?(?P<text>[^\"”]+?)[\"”]?$",
+      "template": "say {text}",
+      "desc": "全服广播"
+    },
+    {
+      "id": "title_show",
+      "regex": "^(?:给\\s*(?P<target>.+?)\\s*)?(?:显示|发送)?\\s*标题\\s*[\"“]?(?P<text>[^\"”]+?)[\"”]?$",
+      "template": "title {target} title {{\"text\":\"{text}\"}}",
+      "desc": "显示标题"
+    },
+    {
+      "id": "xp_give",
+      "regex": "^给\\s*(?P<target>.+?)\\s*(?P<amount>\\d+)\\s*(?P<unit>点经验|级经验|经验点|经验等级|经验)$",
+      "template": "xp add {target} {amount} {unit}",
+      "desc": "给予经验"
+    },
+    {
+      "id": "enchant_item",
+      "regex": "^(?:给\\s*(?P<target>.+?)\\s*)?(?:附魔|上附魔)\\s*(?P<enchantment>\\D+?)\\s*(?P<level>\\d+)\\s*级$",
+      "template": "enchant {target}，{enchantment} {level}",
+      "desc": "给手持物品附魔，例如「给Steve附魔锋利5级」"
+    },
+    {
+      "id": "clear_items",
+      "regex": "^清空\\s*(?P<target>.+?)\\s*的\\s*(?P<item>.+)$",
+      "template": "clear {target} {item}",
+      "desc": "清空某人背包里的某物"
+    },
+    {
+      "id": "clear_all",
+      "regex": "^清空\\s*(?P<target>.+?)\\s*(?:的)?\\s*(?:背包|物品|全部)$",
+      "template": "clear {target}",
+      "desc": "清空某人整个背包"
+    }
+  ]
+}

@@ -1,0 +1,1481 @@
+{
+  "version": "1.21.1",
+  "commands": [
+    {
+      "command": "setblock",
+      "display": "/setblock — 设置单个方块",
+      "category": "方块",
+      "args": [
+        {
+          "key": "pos",
+          "label": "坐标",
+          "kind": "coord",
+          "default": "~ ~ ~",
+          "required": true
+        },
+        {
+          "key": "block",
+          "label": "方块",
+          "kind": "block",
+          "default": "minecraft:stone",
+          "required": true
+        },
+        {
+          "key": "mode",
+          "label": "模式",
+          "kind": "enum",
+          "options": [
+            "replace",
+            "destroy",
+            "keep"
+          ],
+          "default": "replace"
+        }
+      ]
+    },
+    {
+      "command": "fill",
+      "display": "/fill — 填充区域",
+      "category": "方块",
+      "args": [
+        {
+          "key": "from",
+          "label": "起点",
+          "kind": "coord",
+          "default": "~ ~ ~",
+          "required": true
+        },
+        {
+          "key": "to",
+          "label": "终点",
+          "kind": "coord",
+          "default": "~ ~ ~",
+          "required": true
+        },
+        {
+          "key": "block",
+          "label": "方块",
+          "kind": "block",
+          "default": "minecraft:stone",
+          "required": true
+        },
+        {
+          "key": "mode",
+          "label": "模式",
+          "kind": "enum",
+          "options": [
+            "replace",
+            "outline",
+            "hollow",
+            "destroy",
+            "keep"
+          ],
+          "default": "replace"
+        }
+      ]
+    },
+    {
+      "command": "clone",
+      "display": "/clone — 克隆区域",
+      "category": "方块",
+      "args": [
+        {
+          "key": "begin",
+          "label": "起始坐标",
+          "kind": "coord",
+          "default": "~ ~ ~",
+          "required": true
+        },
+        {
+          "key": "end",
+          "label": "结束坐标",
+          "kind": "coord",
+          "default": "~ ~ ~",
+          "required": true
+        },
+        {
+          "key": "destination",
+          "label": "目标坐标",
+          "kind": "coord",
+          "default": "~ ~ ~",
+          "required": true
+        },
+        {
+          "key": "mask_mode",
+          "label": "遮罩",
+          "kind": "enum",
+          "options": [
+            "replace",
+            "masked",
+            "filtered"
+          ],
+          "default": "replace"
+        },
+        {
+          "key": "clone_mode",
+          "label": "克隆模式",
+          "kind": "enum",
+          "options": [
+            "normal",
+            "force",
+            "move"
+          ],
+          "default": "normal"
+        }
+      ]
+    },
+    {
+      "command": "data",
+      "display": "/data — 读写方块/实体/存储 NBT",
+      "category": "数据",
+      "args": [
+        {
+          "key": "action",
+          "label": "操作",
+          "kind": "enum",
+          "options": [
+            "get",
+            "merge",
+            "modify",
+            "remove"
+          ],
+          "default": "get",
+          "required": true
+        },
+        {
+          "key": "target_type",
+          "label": "目标类型",
+          "kind": "enum",
+          "options": [
+            "block",
+            "entity",
+            "storage"
+          ],
+          "default": "block",
+          "required": true
+        },
+        {
+          "key": "target",
+          "label": "目标（坐标或选择器或存储ID）",
+          "kind": "text",
+          "default": "~ ~ ~",
+          "required": true
+        },
+        {
+          "key": "path",
+          "label": "NBT 路径",
+          "kind": "text",
+          "default": ""
+        },
+        {
+          "key": "value",
+          "label": "值（merge 时使用）",
+          "kind": "nbt",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "command": "scoreboard",
+      "display": "/scoreboard — 计分板操作",
+      "category": "数据",
+      "args": [
+        {
+          "key": "sub",
+          "label": "子命令",
+          "kind": "enum",
+          "options": [
+            "objectives",
+            "players"
+          ],
+          "default": "objectives",
+          "required": true
+        },
+        {
+          "key": "action",
+          "label": "动作",
+          "kind": "text",
+          "default": "add",
+          "required": true
+        },
+        {
+          "key": "name",
+          "label": "名称",
+          "kind": "text",
+          "default": "obj",
+          "required": true
+        },
+        {
+          "key": "criteria",
+          "label": "准则/显示名/值",
+          "kind": "text",
+          "default": "dummy"
+        }
+      ]
+    },
+    {
+      "command": "effect",
+      "display": "/effect — 给予/清除状态效果",
+      "category": "实体",
+      "args": [
+        {
+          "key": "action",
+          "label": "动作",
+          "kind": "enum",
+          "options": [
+            "give",
+            "clear"
+          ],
+          "default": "give",
+          "required": true
+        },
+        {
+          "key": "target",
+          "label": "目标",
+          "kind": "target",
+          "default": "@p",
+          "required": true
+        },
+        {
+          "key": "effect",
+          "label": "效果 ID",
+          "kind": "text",
+          "default": "minecraft:speed"
+        },
+        {
+          "key": "duration",
+          "label": "时长（秒）",
+          "kind": "int",
+          "default": "30"
+        },
+        {
+          "key": "amplifier",
+          "label": "等级（0 起）",
+          "kind": "int",
+          "default": "0"
+        },
+        {
+          "key": "hide_particles",
+          "label": "隐藏粒子",
+          "kind": "bool",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "command": "particle",
+      "display": "/particle — 生成粒子",
+      "category": "效果",
+      "args": [
+        {
+          "key": "name",
+          "label": "粒子 ID",
+          "kind": "text",
+          "default": "minecraft:flame",
+          "required": true
+        },
+        {
+          "key": "pos",
+          "label": "位置",
+          "kind": "coord",
+          "default": "~ ~ ~",
+          "required": true
+        },
+        {
+          "key": "delta",
+          "label": "扩散",
+          "kind": "coord",
+          "default": "0 0 0"
+        },
+        {
+          "key": "speed",
+          "label": "速度",
+          "kind": "float",
+          "default": "0"
+        },
+        {
+          "key": "count",
+          "label": "数量",
+          "kind": "int",
+          "default": "1"
+        },
+        {
+          "key": "mode",
+          "label": "模式",
+          "kind": "enum",
+          "options": [
+            "normal",
+            "force"
+          ],
+          "default": "normal"
+        }
+      ]
+    },
+    {
+      "command": "tp",
+      "display": "/tp — 传送",
+      "category": "实体",
+      "args": [
+        {
+          "key": "targets",
+          "label": "目标",
+          "kind": "target",
+          "default": "@p",
+          "required": true
+        },
+        {
+          "key": "destination",
+          "label": "目的地 / 朝向",
+          "kind": "text",
+          "default": "~ ~ ~",
+          "required": true,
+          "repeat": 3,
+          "hint": "坐标（3 段）或 facing <yaw> <pitch>"
+        }
+      ]
+    },
+    {
+      "command": "tellraw",
+      "display": "/tellraw — 发送聊天消息",
+      "category": "实体",
+      "args": [
+        {
+          "key": "target",
+          "label": "目标",
+          "kind": "target",
+          "default": "@a",
+          "required": true
+        },
+        {
+          "key": "message",
+          "label": "消息（JSON 文本组件）",
+          "kind": "nbt",
+          "default": "{\"text\":\"Hello\"}",
+          "required": true
+        }
+      ]
+    },
+    {
+      "command": "title",
+      "display": "/title — 标题",
+      "category": "效果",
+      "args": [
+        {
+          "key": "target",
+          "label": "目标",
+          "kind": "target",
+          "default": "@a",
+          "required": true
+        },
+        {
+          "key": "action",
+          "label": "类型",
+          "kind": "enum",
+          "options": [
+            "title",
+            "subtitle",
+            "actionbar",
+            "times",
+            "reset"
+          ],
+          "default": "title",
+          "required": true
+        },
+        {
+          "key": "value",
+          "label": "文本 / 时长",
+          "kind": "nbt",
+          "default": "{\"text\":\"Hello\"}",
+          "when": {
+            "action": [
+              "title",
+              "subtitle",
+              "actionbar",
+              "times"
+            ]
+          }
+        },
+        {
+          "key": "value2",
+          "label": "第二时长（times 时）",
+          "kind": "text",
+          "default": "",
+          "when": {
+            "action": [
+              "times"
+            ]
+          }
+        },
+        {
+          "key": "value3",
+          "label": "第三时长（times 时）",
+          "kind": "text",
+          "default": "",
+          "when": {
+            "action": [
+              "times"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "command": "bossbar",
+      "display": "/bossbar — BOSS 血条",
+      "category": "效果",
+      "args": [
+        {
+          "key": "action",
+          "label": "操作",
+          "kind": "enum",
+          "options": [
+            "add",
+            "remove",
+            "get",
+            "set",
+            "list"
+          ],
+          "default": "add",
+          "required": true
+        },
+        {
+          "key": "id",
+          "label": "ID",
+          "kind": "text",
+          "default": "minecraft:custom:name",
+          "required": true
+        },
+        {
+          "key": "name",
+          "label": "显示名（add 时）",
+          "kind": "nbt",
+          "default": "{\"text\":\"Boss\"}",
+          "when": {
+            "action": [
+              "add"
+            ]
+          }
+        },
+        {
+          "key": "field",
+          "label": "字段（set 时）",
+          "kind": "enum",
+          "options": [
+            "name",
+            "color",
+            "style",
+            "value",
+            "max",
+            "visible",
+            "players"
+          ],
+          "default": "value",
+          "when": {
+            "action": [
+              "set"
+            ]
+          }
+        },
+        {
+          "key": "value",
+          "label": "值（set 时）",
+          "kind": "text",
+          "default": "",
+          "when": {
+            "action": [
+              "set"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "command": "attribute",
+      "display": "/attribute — 属性",
+      "category": "实体",
+      "args": [
+        {
+          "key": "target",
+          "label": "目标",
+          "kind": "target",
+          "default": "@s",
+          "required": true
+        },
+        {
+          "key": "attribute",
+          "label": "属性 ID",
+          "kind": "text",
+          "default": "minecraft:max_health",
+          "required": true
+        },
+        {
+          "key": "action",
+          "label": "操作",
+          "kind": "enum",
+          "options": [
+            "get",
+            "base",
+            "modifier",
+            "set"
+          ],
+          "default": "get"
+        },
+        {
+          "key": "value",
+          "label": "值",
+          "kind": "text",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "command": "loot",
+      "display": "/loot — 掉落物",
+      "category": "数据",
+      "args": [
+        {
+          "key": "action",
+          "label": "操作",
+          "kind": "enum",
+          "options": [
+            "give",
+            "insert",
+            "spawn",
+            "replace",
+            "fish"
+          ],
+          "default": "give",
+          "required": true
+        },
+        {
+          "key": "target",
+          "label": "目标",
+          "kind": "text",
+          "default": "@p",
+          "required": true
+        },
+        {
+          "key": "source_type",
+          "label": "来源类型",
+          "kind": "enum",
+          "options": [
+            "loot",
+            "kill",
+            "mine",
+            "fish"
+          ],
+          "default": "loot"
+        },
+        {
+          "key": "source",
+          "label": "来源（表 ID 或实体）",
+          "kind": "text",
+          "default": "minecraft:chests/simple_dungeon",
+          "when": {
+            "source_type": [
+              "loot",
+              "kill"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "command": "function",
+      "display": "/function — 执行函数",
+      "category": "数据",
+      "args": [
+        {
+          "key": "name",
+          "label": "函数 ID",
+          "kind": "text",
+          "default": "minecraft:example",
+          "required": true
+        }
+      ]
+    },
+    {
+      "command": "schedule",
+      "display": "/schedule — 定时执行",
+      "category": "数据",
+      "args": [
+        {
+          "key": "action",
+          "label": "操作",
+          "kind": "enum",
+          "options": [
+            "function",
+            "clear"
+          ],
+          "default": "function",
+          "required": true
+        },
+        {
+          "key": "name",
+          "label": "函数 ID",
+          "kind": "text",
+          "default": "minecraft:example",
+          "required": true
+        },
+        {
+          "key": "time",
+          "label": "时间（如 1d / 1s）",
+          "kind": "text",
+          "default": "1s",
+          "when": {
+            "action": [
+              "function"
+            ]
+          }
+        },
+        {
+          "key": "mode",
+          "label": "模式",
+          "kind": "enum",
+          "options": [
+            "replace",
+            "append"
+          ],
+          "default": "replace",
+          "when": {
+            "action": [
+              "function"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "command": "tag",
+      "display": "/tag — 实体标签",
+      "category": "实体",
+      "args": [
+        {
+          "key": "target",
+          "label": "目标",
+          "kind": "target",
+          "default": "@s",
+          "required": true
+        },
+        {
+          "key": "action",
+          "label": "操作",
+          "kind": "enum",
+          "options": [
+            "add",
+            "remove",
+            "list"
+          ],
+          "default": "add",
+          "required": true
+        },
+        {
+          "key": "name",
+          "label": "标签名",
+          "kind": "text",
+          "default": "mytag"
+        }
+      ]
+    },
+    {
+      "command": "team",
+      "display": "/team — 队伍",
+      "category": "实体",
+      "args": [
+        {
+          "key": "action",
+          "label": "操作",
+          "kind": "enum",
+          "options": [
+            "add",
+            "remove",
+            "empty",
+            "join",
+            "leave",
+            "list",
+            "modify"
+          ],
+          "default": "add",
+          "required": true
+        },
+        {
+          "key": "name",
+          "label": "队伍名",
+          "kind": "text",
+          "default": "team1"
+        },
+        {
+          "key": "value",
+          "label": "补充参数",
+          "kind": "text",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "command": "item",
+      "display": "/item — 修改容器物品",
+      "category": "物品",
+      "args": [
+        {
+          "key": "action",
+          "label": "操作",
+          "kind": "enum",
+          "options": [
+            "replace",
+            "modify",
+            "copy"
+          ],
+          "default": "replace",
+          "required": true
+        },
+        {
+          "key": "target",
+          "label": "目标（坐标或选择器）",
+          "kind": "text",
+          "default": "~ ~ ~",
+          "required": true,
+          "repeat": 3
+        },
+        {
+          "key": "slot",
+          "label": "槽位",
+          "kind": "text",
+          "default": "container.0",
+          "when": {
+            "action": [
+              "replace",
+              "modify",
+              "copy"
+            ]
+          }
+        },
+        {
+          "key": "item",
+          "label": "物品 ID",
+          "kind": "item",
+          "default": "minecraft:stone",
+          "when": {
+            "action": [
+              "replace"
+            ]
+          }
+        },
+        {
+          "key": "count",
+          "label": "数量",
+          "kind": "int",
+          "default": "1",
+          "when": {
+            "action": [
+              "replace"
+            ]
+          }
+        },
+        {
+          "key": "modifier",
+          "label": "修饰器（modify 时）",
+          "kind": "text",
+          "default": "",
+          "when": {
+            "action": [
+              "modify"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "command": "advancement",
+      "display": "/advancement — 进度",
+      "category": "数据",
+      "args": [
+        {
+          "key": "action",
+          "label": "操作",
+          "kind": "enum",
+          "options": [
+            "grant",
+            "revoke"
+          ],
+          "default": "grant",
+          "required": true
+        },
+        {
+          "key": "target",
+          "label": "目标",
+          "kind": "target",
+          "default": "@p",
+          "required": true
+        },
+        {
+          "key": "mode",
+          "label": "模式",
+          "kind": "enum",
+          "options": [
+            "only",
+            "until",
+            "from",
+            "through",
+            "everything"
+          ],
+          "default": "only"
+        },
+        {
+          "key": "advancement",
+          "label": "进度 ID",
+          "kind": "text",
+          "default": "minecraft:story/root"
+        }
+      ]
+    },
+    {
+      "command": "recipe",
+      "display": "/recipe — 配方",
+      "category": "数据",
+      "args": [
+        {
+          "key": "action",
+          "label": "操作",
+          "kind": "enum",
+          "options": [
+            "give",
+            "take"
+          ],
+          "default": "give",
+          "required": true
+        },
+        {
+          "key": "target",
+          "label": "目标",
+          "kind": "target",
+          "default": "@s",
+          "required": true
+        },
+        {
+          "key": "recipe",
+          "label": "配方 ID",
+          "kind": "text",
+          "default": "*"
+        }
+      ]
+    },
+    {
+      "command": "damage",
+      "display": "/damage — 造成伤害",
+      "category": "实体",
+      "args": [
+        {
+          "key": "target",
+          "label": "目标",
+          "kind": "target",
+          "default": "@s",
+          "required": true
+        },
+        {
+          "key": "amount",
+          "label": "伤害值",
+          "kind": "float",
+          "default": "1",
+          "required": true
+        },
+        {
+          "key": "type",
+          "label": "伤害类型",
+          "kind": "text",
+          "default": "minecraft:generic"
+        },
+        {
+          "key": "at",
+          "label": "伤害源位置",
+          "kind": "text",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "command": "ride",
+      "display": "/ride — 骑乘",
+      "category": "实体",
+      "args": [
+        {
+          "key": "target",
+          "label": "目标",
+          "kind": "target",
+          "default": "@s",
+          "required": true
+        },
+        {
+          "key": "action",
+          "label": "操作",
+          "kind": "enum",
+          "options": [
+            "mount",
+            "dismount"
+          ],
+          "default": "mount",
+          "required": true
+        },
+        {
+          "key": "vehicle",
+          "label": "载具",
+          "kind": "target",
+          "default": "@e[limit=1]"
+        }
+      ]
+    },
+    {
+      "command": "rotate",
+      "display": "/rotate — 旋转实体",
+      "category": "实体",
+      "args": [
+        {
+          "key": "target",
+          "label": "目标",
+          "kind": "target",
+          "default": "@s",
+          "required": true
+        },
+        {
+          "key": "rotation",
+          "label": "朝向（yaw pitch）",
+          "kind": "text",
+          "default": "~ ~",
+          "required": true,
+          "repeat": 2
+        }
+      ]
+    },
+    {
+      "command": "random",
+      "display": "/random — 随机数",
+      "category": "数据",
+      "args": [
+        {
+          "key": "action",
+          "label": "操作",
+          "kind": "enum",
+          "options": [
+            "value",
+            "roll",
+            "reset"
+          ],
+          "default": "value",
+          "required": true
+        },
+        {
+          "key": "range",
+          "label": "范围",
+          "kind": "text",
+          "default": "1..6"
+        },
+        {
+          "key": "sequence",
+          "label": "序列",
+          "kind": "text",
+          "default": "minecraft:example"
+        }
+      ]
+    },
+    {
+      "command": "worldborder",
+      "display": "/worldborder — 世界边界",
+      "category": "世界",
+      "args": [
+        {
+          "key": "action",
+          "label": "操作",
+          "kind": "enum",
+          "options": [
+            "add",
+            "set",
+            "center",
+            "damage",
+            "get",
+            "warning"
+          ],
+          "default": "get",
+          "required": true
+        },
+        {
+          "key": "value",
+          "label": "值",
+          "kind": "text",
+          "default": "",
+          "when": {
+            "action": [
+              "add",
+              "set",
+              "center",
+              "damage",
+              "warning"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "command": "forceload",
+      "display": "/forceload — 强制加载区块",
+      "category": "世界",
+      "args": [
+        {
+          "key": "action",
+          "label": "操作",
+          "kind": "enum",
+          "options": [
+            "add",
+            "remove",
+            "query"
+          ],
+          "default": "query",
+          "required": true
+        },
+        {
+          "key": "from",
+          "label": "起点",
+          "kind": "coord",
+          "default": "~ ~ ~",
+          "when": {
+            "action": [
+              "add",
+              "remove"
+            ]
+          }
+        },
+        {
+          "key": "to",
+          "label": "终点（可省略）",
+          "kind": "coord",
+          "default": "",
+          "when": {
+            "action": [
+              "add",
+              "remove"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "command": "locate",
+      "display": "/locate — 定位结构/生物群系",
+      "category": "世界",
+      "args": [
+        {
+          "key": "kind",
+          "label": "类型",
+          "kind": "enum",
+          "options": [
+            "structure",
+            "biome",
+            "poi"
+          ],
+          "default": "structure",
+          "required": true
+        },
+        {
+          "key": "id",
+          "label": "ID",
+          "kind": "text",
+          "default": "minecraft:village_plains",
+          "required": true
+        }
+      ]
+    },
+    {
+      "command": "place",
+      "display": "/place — 放置结构/特征/拼图",
+      "category": "世界",
+      "args": [
+        {
+          "key": "kind",
+          "label": "类型",
+          "kind": "enum",
+          "options": [
+            "feature",
+            "jigsaw",
+            "structure",
+            "template"
+          ],
+          "default": "feature",
+          "required": true
+        },
+        {
+          "key": "id",
+          "label": "ID",
+          "kind": "text",
+          "default": "minecraft:oak",
+          "required": true
+        },
+        {
+          "key": "pos",
+          "label": "位置",
+          "kind": "coord",
+          "default": "~ ~ ~",
+          "required": true
+        }
+      ]
+    },
+    {
+      "command": "gamerule",
+      "display": "/gamerule — 游戏规则",
+      "category": "世界",
+      "args": [
+        {
+          "key": "rule",
+          "label": "规则",
+          "kind": "text",
+          "default": "doDaylightCycle",
+          "required": true
+        },
+        {
+          "key": "value",
+          "label": "值",
+          "kind": "text",
+          "default": "true"
+        }
+      ]
+    },
+    {
+      "command": "time",
+      "display": "/time — 时间",
+      "category": "世界",
+      "args": [
+        {
+          "key": "action",
+          "label": "操作",
+          "kind": "enum",
+          "options": [
+            "set",
+            "add",
+            "query"
+          ],
+          "default": "set",
+          "required": true
+        },
+        {
+          "key": "value",
+          "label": "时间点（set / query）",
+          "kind": "text",
+          "default": "",
+          "optional": true,
+          "when": {
+            "action": [
+              "set",
+              "query"
+            ]
+          },
+          "hint": "day / noon / night / midnight"
+        },
+        {
+          "key": "amount",
+          "label": "数量（add 时）",
+          "kind": "int",
+          "default": "1000",
+          "when": {
+            "action": [
+              "add"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "command": "weather",
+      "display": "/weather — 天气",
+      "category": "世界",
+      "args": [
+        {
+          "key": "type",
+          "label": "天气",
+          "kind": "enum",
+          "options": [
+            "clear",
+            "rain",
+            "thunder"
+          ],
+          "default": "clear",
+          "required": true
+        },
+        {
+          "key": "duration",
+          "label": "时长（秒，可选）",
+          "kind": "int",
+          "default": "",
+          "optional": true
+        }
+      ]
+    },
+    {
+      "command": "difficulty",
+      "display": "/difficulty — 难度",
+      "category": "世界",
+      "args": [
+        {
+          "key": "level",
+          "label": "难度",
+          "kind": "enum",
+          "options": [
+            "peaceful",
+            "easy",
+            "normal",
+            "hard"
+          ],
+          "default": "normal",
+          "required": true
+        }
+      ]
+    },
+    {
+      "command": "gamemode",
+      "display": "/gamemode — 游戏模式",
+      "category": "实体",
+      "args": [
+        {
+          "key": "mode",
+          "label": "模式",
+          "kind": "enum",
+          "options": [
+            "survival",
+            "creative",
+            "adventure",
+            "spectator"
+          ],
+          "default": "creative",
+          "required": true
+        },
+        {
+          "key": "target",
+          "label": "目标",
+          "kind": "target",
+          "default": "@s"
+        }
+      ]
+    },
+    {
+      "command": "kill",
+      "display": "/kill — 杀死实体",
+      "category": "实体",
+      "args": [
+        {
+          "key": "target",
+          "label": "目标",
+          "kind": "target",
+          "default": "@s",
+          "required": true
+        }
+      ]
+    },
+    {
+      "command": "clear",
+      "display": "/clear — 清空物品",
+      "category": "物品",
+      "args": [
+        {
+          "key": "target",
+          "label": "目标",
+          "kind": "target",
+          "default": "@s",
+          "required": true
+        },
+        {
+          "key": "item",
+          "label": "物品",
+          "kind": "item",
+          "default": ""
+        },
+        {
+          "key": "max_count",
+          "label": "最大数量",
+          "kind": "int",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "command": "enchant",
+      "display": "/enchant — 附魔",
+      "category": "物品",
+      "args": [
+        {
+          "key": "target",
+          "label": "目标",
+          "kind": "target",
+          "default": "@s",
+          "required": true
+        },
+        {
+          "key": "enchantment",
+          "label": "附魔 ID",
+          "kind": "text",
+          "default": "minecraft:sharpness",
+          "required": true
+        },
+        {
+          "key": "level",
+          "label": "等级",
+          "kind": "int",
+          "default": "1"
+        }
+      ]
+    },
+    {
+      "command": "xp",
+      "display": "/xp — 经验",
+      "category": "实体",
+      "args": [
+        {
+          "key": "action",
+          "label": "操作",
+          "kind": "enum",
+          "options": [
+            "add",
+            "set",
+            "query"
+          ],
+          "default": "add",
+          "required": true
+        },
+        {
+          "key": "target",
+          "label": "目标",
+          "kind": "target",
+          "default": "@s",
+          "required": true
+        },
+        {
+          "key": "amount",
+          "label": "数量",
+          "kind": "int",
+          "default": "10",
+          "when": {
+            "action": [
+              "add",
+              "set"
+            ]
+          }
+        },
+        {
+          "key": "unit",
+          "label": "单位",
+          "kind": "enum",
+          "options": [
+            "points",
+            "levels"
+          ],
+          "default": "points",
+          "when": {
+            "action": [
+              "add",
+              "set"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "command": "playsound",
+      "display": "/playsound — 播放音效",
+      "category": "效果",
+      "args": [
+        {
+          "key": "sound",
+          "label": "音效 ID",
+          "kind": "text",
+          "default": "minecraft:entity.player.levelup",
+          "required": true
+        },
+        {
+          "key": "source",
+          "label": "音源",
+          "kind": "enum",
+          "options": [
+            "master",
+            "music",
+            "record",
+            "weather",
+            "block",
+            "hostile",
+            "neutral",
+            "player",
+            "ambient",
+            "voice"
+          ],
+          "default": "master"
+        },
+        {
+          "key": "target",
+          "label": "目标",
+          "kind": "target",
+          "default": "@a"
+        },
+        {
+          "key": "pos",
+          "label": "位置",
+          "kind": "coord",
+          "default": "~ ~ ~"
+        },
+        {
+          "key": "volume",
+          "label": "音量",
+          "kind": "float",
+          "default": "1.0"
+        },
+        {
+          "key": "pitch",
+          "label": "音调",
+          "kind": "float",
+          "default": "1.0"
+        }
+      ]
+    },
+    {
+      "command": "stopsound",
+      "display": "/stopsound — 停止音效",
+      "category": "效果",
+      "args": [
+        {
+          "key": "target",
+          "label": "目标",
+          "kind": "target",
+          "default": "@a",
+          "required": true
+        },
+        {
+          "key": "source",
+          "label": "音源",
+          "kind": "text",
+          "default": "*"
+        },
+        {
+          "key": "sound",
+          "label": "音效 ID",
+          "kind": "text",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "command": "me",
+      "display": "/me — 动作消息",
+      "category": "实体",
+      "args": [
+        {
+          "key": "action",
+          "label": "动作文本",
+          "kind": "text",
+          "default": "waves",
+          "required": true,
+          "hint": "纯文本，不需要 JSON"
+        }
+      ]
+    },
+    {
+      "command": "seed",
+      "display": "/seed — 显示世界种子",
+      "category": "世界",
+      "args": []
+    }
+  ]
+}

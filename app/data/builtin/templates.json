@@ -1,0 +1,161 @@
+{
+  "version": "1.21.1",
+  "templates": [
+    {
+      "id": "entity.attributes.max_health",
+      "name": "实体属性 — 最大生命",
+      "category": "实体",
+      "snbt": "{\"attributes\":[{\"id\":\"minecraft:max_health\",\"base\":20.0}]}"
+    },
+    {
+      "id": "entity.attributes.speed",
+      "name": "实体属性 — 移动速度",
+      "category": "实体",
+      "snbt": "{\"attributes\":[{\"id\":\"minecraft:movement_speed\",\"base\":0.3}]}"
+    },
+    {
+      "id": "entity.attributes.full",
+      "name": "实体属性 — 常用三项",
+      "category": "实体",
+      "snbt": "{\"attributes\":[{\"id\":\"minecraft:max_health\",\"base\":20.0},{\"id\":\"minecraft:attack_damage\",\"base\":3.0},{\"id\":\"minecraft:movement_speed\",\"base\":0.25}]}"
+    },
+    {
+      "id": "entity.hand_items.mainhand",
+      "name": "主手物品",
+      "category": "实体",
+      "snbt": "{\"HandItems\":[{\"id\":\"minecraft:diamond_sword\",\"count\":1},{}],\"equipment\":{\"mainhand\":{\"id\":\"minecraft:diamond_sword\",\"count\":1}}}"
+    },
+    {
+      "id": "entity.armor_items.full",
+      "name": "全套盔甲",
+      "category": "实体",
+      "snbt": "{\"equipment\":{\"head\":{\"id\":\"minecraft:diamond_helmet\",\"count\":1},\"chest\":{\"id\":\"minecraft:diamond_chestplate\",\"count\":1},\"legs\":{\"id\":\"minecraft:diamond_leggings\",\"count\":1},\"feet\":{\"id\":\"minecraft:diamond_boots\",\"count\":1}}}"
+    },
+    {
+      "id": "entity.custom_name",
+      "name": "自定义名称（红色）",
+      "category": "实体",
+      "snbt": "{\"CustomName\":\"{\\\"text\\\":\\\"命名\\\",\\\"color\\\":\\\"red\\\"}\"}"
+    },
+    {
+      "id": "entity.tags",
+      "name": "实体标签",
+      "category": "实体",
+      "snbt": "{\"Tags\":[\"demo\",\"stage7\"]}"
+    },
+    {
+      "id": "entity.baby",
+      "name": "幼年状态",
+      "category": "实体",
+      "snbt": "{\"IsBaby\":1b}"
+    },
+    {
+      "id": "entity.invulnerable",
+      "name": "无敌",
+      "category": "实体",
+      "snbt": "{\"Invulnerable\":1b}"
+    },
+    {
+      "id": "entity.no_ai",
+      "name": "无 AI（静止）",
+      "category": "实体",
+      "snbt": "{\"NoAI\":1b,\"Silent\":1b}"
+    },
+    {
+      "id": "block.container.chest",
+      "name": "箱子物品（3 格）",
+      "category": "方块",
+      "snbt": "{\"Items\":[{\"Slot\":0,\"id\":\"minecraft:diamond\",\"count\":64},{\"Slot\":1,\"id\":\"minecraft:gold_ingot\",\"count\":16},{\"Slot\":2,\"id\":\"minecraft:apple\",\"count\":32}]}"
+    },
+    {
+      "id": "block.sign.front",
+      "name": "告示牌正面文字",
+      "category": "方块",
+      "snbt": "{\"front_text\":{\"messages\":[\"{\\\"text\\\":\\\"第一行\\\"}\",\"{\\\"text\\\":\\\"第二行\\\"}\",\"{\\\"text\\\":\\\"\\\"}\",\"{\\\"text\\\":\\\"\\\"}\"]}}"
+    },
+    {
+      "id": "block.command_block",
+      "name": "命令方块（自动执行）",
+      "category": "方块",
+      "snbt": "{\"Command\":\"say hi\",\"auto\":1b}"
+    },
+    {
+      "id": "villager.offers.librarian",
+      "name": "图书管理员交易",
+      "category": "村民",
+      "snbt": "{\"Offers\":{\"Recipes\":[{\"buy\":{\"id\":\"minecraft:emerald\",\"count\":1},\"sell\":{\"id\":\"minecraft:enchanted_book\",\"count\":1},\"maxUses\":12,\"rewardExp\":1b}]}}"
+    },
+    {
+      "id": "villager.profession.librarian",
+      "name": "村民职业 — 图书管理员",
+      "category": "村民",
+      "snbt": "{\"VillagerData\":{\"level\":3,\"profession\":\"minecraft:librarian\",\"type\":\"minecraft:plains\"}}"
+    },
+    {
+      "id": "item.enchantments.sharpness5",
+      "name": "物品组件 — 锋利 V",
+      "category": "物品组件",
+      "snbt": "{\"minecraft:enchantments\":{\"minecraft:sharpness\":5}}"
+    },
+    {
+      "id": "item.custom_name",
+      "name": "物品组件 — 自定义名称",
+      "category": "物品组件",
+      "snbt": "{\"minecraft:custom_name\":\"神剑\"}"
+    },
+    {
+      "id": "item.unbreakable",
+      "name": "物品组件 — 无法破坏",
+      "category": "物品组件",
+      "snbt": "{\"minecraft:unbreakable\":1b}"
+    },
+    {
+      "id": "item.attribute_modifiers.attack",
+      "name": "物品组件 — 攻击力加成",
+      "category": "物品组件",
+      "snbt": "{\"minecraft:attribute_modifiers\":[{\"type\":\"minecraft:attack_damage\",\"amount\":5.0,\"operation\":\"add_value\",\"slot\":\"mainhand\",\"id\":\"example:attack_bonus\"}]}"
+    },
+    {
+      "id": "scoreboard.player.scores",
+      "name": "计分板筛选 — scores",
+      "category": "选择器",
+      "snbt": "{\"kills\":\"10..\",\"deaths\":\"..5\"}"
+    },
+    {
+      "id": "item.food.component",
+      "name": "物品组件 — 食物属性",
+      "category": "物品组件",
+      "snbt": "{\"minecraft:food\":{\"nutrition\":4,\"saturation\":2.0}}"
+    },
+    {
+      "id": "item.trim.component",
+      "name": "物品组件 — 盔甲纹饰",
+      "category": "物品组件",
+      "snbt": "{\"minecraft:trim\":{\"material\":\"minecraft:gold\",\"pattern\":\"minecraft:silence\"}}"
+    },
+    {
+      "id": "item.tool.component",
+      "name": "物品组件 — 工具挖掘速度",
+      "category": "物品组件",
+      "snbt": "{\"minecraft:tool\":{\"rules\":[{\"blocks\":\"#minecraft:mineable/pickaxe\",\"speed\":8.0}],\"default_mining_speed\":1.0,\"damage_per_block\":1}}"
+    },
+    {
+      "id": "item.custom_data.component",
+      "name": "物品组件 — 自定义数据",
+      "category": "物品组件",
+      "snbt": "{\"minecraft:custom_data\":{\"myplugin\":{\"level\":3}}}"
+    },
+    {
+      "id": "entity.equipment.full",
+      "name": "实体装备 — equipment 组件",
+      "category": "实体",
+      "snbt": "{\"equipment\":{\"head\":{\"id\":\"minecraft:golden_helmet\",\"count\":1},\"mainhand\":{\"id\":\"minecraft:golden_sword\",\"count\":1}}}"
+    },
+    {
+      "id": "block.container.new_slot",
+      "name": "方块容器 — 1.21 物品结构",
+      "category": "方块",
+      "snbt": "{\"Items\":[{\"Slot\":0,\"id\":\"minecraft:stone\",\"count\":1,\"components\":{\"minecraft:custom_name\":\"\\\"石头\\\"\"}}]}"
+    }
+  ]
+}

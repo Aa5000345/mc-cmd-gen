@@ -1,0 +1,787 @@
+{
+  "version": "1.21.1",
+  "note": "1.21.1 全部实体类型，共 130 条。",
+  "source": "PrismarineJS/minecraft-data 1.20.5+（1.21.1 实体表） + 官方 zh_cn 语言文件",
+  "entities": [
+    {
+      "id": "minecraft:elder_guardian",
+      "display": "远古守卫者",
+      "category": "Boss",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:ender_dragon",
+      "display": "末影龙",
+      "category": "Boss",
+      "type": "mob"
+    },
+    {
+      "id": "minecraft:wither",
+      "display": "凋灵",
+      "category": "Boss",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:iron_golem",
+      "display": "铁傀儡",
+      "category": "NPC",
+      "type": "mob"
+    },
+    {
+      "id": "minecraft:snow_golem",
+      "display": "雪傀儡",
+      "category": "NPC",
+      "type": "mob"
+    },
+    {
+      "id": "minecraft:villager",
+      "display": "村民",
+      "category": "NPC",
+      "type": "passive"
+    },
+    {
+      "id": "minecraft:wandering_trader",
+      "display": "流浪商人",
+      "category": "NPC",
+      "type": "passive"
+    },
+    {
+      "id": "minecraft:area_effect_cloud",
+      "display": "区域效果云",
+      "category": "其他",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:armor_stand",
+      "display": "盔甲架",
+      "category": "其他",
+      "type": "living"
+    },
+    {
+      "id": "minecraft:arrow",
+      "display": "箭",
+      "category": "其他",
+      "type": "projectile"
+    },
+    {
+      "id": "minecraft:boat",
+      "display": "船",
+      "category": "其他",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:experience_orb",
+      "display": "经验球",
+      "category": "其他",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:fireball",
+      "display": "火球",
+      "category": "其他",
+      "type": "projectile"
+    },
+    {
+      "id": "minecraft:item",
+      "display": "掉落物",
+      "category": "其他",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:item_frame",
+      "display": "物品展示框",
+      "category": "其他",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:lightning_bolt",
+      "display": "闪电",
+      "category": "其他",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:marker",
+      "display": "标记",
+      "category": "其他",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:minecart",
+      "display": "矿车",
+      "category": "其他",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:painting",
+      "display": "画",
+      "category": "其他",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:block_display",
+      "display": "方块展示实体",
+      "category": "其他实体",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:chest_boat",
+      "display": "运输船",
+      "category": "其他实体",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:chest_minecart",
+      "display": "运输矿车",
+      "category": "其他实体",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:command_block_minecart",
+      "display": "命令方块矿车",
+      "category": "其他实体",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:end_crystal",
+      "display": "末地水晶",
+      "category": "其他实体",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:falling_block",
+      "display": "下落的方块",
+      "category": "其他实体",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:furnace_minecart",
+      "display": "动力矿车",
+      "category": "其他实体",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:glow_item_frame",
+      "display": "荧光物品展示框",
+      "category": "其他实体",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:hopper_minecart",
+      "display": "漏斗矿车",
+      "category": "其他实体",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:interaction",
+      "display": "交互实体",
+      "category": "其他实体",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:item_display",
+      "display": "物品展示实体",
+      "category": "其他实体",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:leash_knot",
+      "display": "拴绳结",
+      "category": "其他实体",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:ominous_item_spawner",
+      "display": "不祥之物生成器",
+      "category": "其他实体",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:player",
+      "display": "玩家",
+      "category": "其他实体",
+      "type": "player"
+    },
+    {
+      "id": "minecraft:spawner_minecart",
+      "display": "刷怪笼矿车",
+      "category": "其他实体",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:text_display",
+      "display": "文本展示实体",
+      "category": "其他实体",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:tnt",
+      "display": "被激活的TNT",
+      "category": "其他实体",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:tnt_minecart",
+      "display": "TNT矿车",
+      "category": "其他实体",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:breeze_wind_charge",
+      "display": "风弹",
+      "category": "弹射物",
+      "type": "projectile"
+    },
+    {
+      "id": "minecraft:dragon_fireball",
+      "display": "末影龙火球",
+      "category": "弹射物",
+      "type": "projectile"
+    },
+    {
+      "id": "minecraft:egg",
+      "display": "掷出的鸡蛋",
+      "category": "弹射物",
+      "type": "projectile"
+    },
+    {
+      "id": "minecraft:ender_pearl",
+      "display": "掷出的末影珍珠",
+      "category": "弹射物",
+      "type": "projectile"
+    },
+    {
+      "id": "minecraft:experience_bottle",
+      "display": "掷出的附魔之瓶",
+      "category": "弹射物",
+      "type": "projectile"
+    },
+    {
+      "id": "minecraft:eye_of_ender",
+      "display": "末影之眼",
+      "category": "弹射物",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:firework_rocket",
+      "display": "烟花火箭",
+      "category": "弹射物",
+      "type": "projectile"
+    },
+    {
+      "id": "minecraft:fishing_bobber",
+      "display": "浮漂",
+      "category": "弹射物",
+      "type": "projectile"
+    },
+    {
+      "id": "minecraft:llama_spit",
+      "display": "羊驼唾沫",
+      "category": "弹射物",
+      "type": "projectile"
+    },
+    {
+      "id": "minecraft:potion",
+      "display": "药水",
+      "category": "弹射物",
+      "type": "projectile"
+    },
+    {
+      "id": "minecraft:shulker_bullet",
+      "display": "潜影弹",
+      "category": "弹射物",
+      "type": "projectile"
+    },
+    {
+      "id": "minecraft:small_fireball",
+      "display": "小火球",
+      "category": "弹射物",
+      "type": "projectile"
+    },
+    {
+      "id": "minecraft:snowball",
+      "display": "雪球",
+      "category": "弹射物",
+      "type": "projectile"
+    },
+    {
+      "id": "minecraft:spectral_arrow",
+      "display": "光灵箭",
+      "category": "弹射物",
+      "type": "projectile"
+    },
+    {
+      "id": "minecraft:trident",
+      "display": "三叉戟",
+      "category": "弹射物",
+      "type": "projectile"
+    },
+    {
+      "id": "minecraft:wind_charge",
+      "display": "风弹",
+      "category": "弹射物",
+      "type": "projectile"
+    },
+    {
+      "id": "minecraft:wither_skull",
+      "display": "凋灵之首",
+      "category": "弹射物",
+      "type": "projectile"
+    },
+    {
+      "id": "minecraft:blaze",
+      "display": "烈焰人",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:bogged",
+      "display": "沼骸",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:breeze",
+      "display": "旋风人",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:cave_spider",
+      "display": "洞穴蜘蛛",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:creeper",
+      "display": "苦力怕",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:drowned",
+      "display": "溺尸",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:enderman",
+      "display": "末影人",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:endermite",
+      "display": "末影螨",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:evoker",
+      "display": "唤魔者",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:evoker_fangs",
+      "display": "唤魔者尖牙",
+      "category": "敌对生物",
+      "type": "other"
+    },
+    {
+      "id": "minecraft:ghast",
+      "display": "恶魂",
+      "category": "敌对生物",
+      "type": "mob"
+    },
+    {
+      "id": "minecraft:giant",
+      "display": "巨人",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:guardian",
+      "display": "守卫者",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:hoglin",
+      "display": "疣猪兽",
+      "category": "敌对生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:husk",
+      "display": "尸壳",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:illusioner",
+      "display": "幻术师",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:magma_cube",
+      "display": "岩浆怪",
+      "category": "敌对生物",
+      "type": "mob"
+    },
+    {
+      "id": "minecraft:phantom",
+      "display": "幻翼",
+      "category": "敌对生物",
+      "type": "mob"
+    },
+    {
+      "id": "minecraft:piglin",
+      "display": "猪灵",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:piglin_brute",
+      "display": "猪灵蛮兵",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:pillager",
+      "display": "掠夺者",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:ravager",
+      "display": "劫掠兽",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:shulker",
+      "display": "潜影贝",
+      "category": "敌对生物",
+      "type": "mob"
+    },
+    {
+      "id": "minecraft:silverfish",
+      "display": "蠹虫",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:skeleton",
+      "display": "骷髅",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:skeleton_horse",
+      "display": "骷髅马",
+      "category": "敌对生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:slime",
+      "display": "史莱姆",
+      "category": "敌对生物",
+      "type": "mob"
+    },
+    {
+      "id": "minecraft:spider",
+      "display": "蜘蛛",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:stray",
+      "display": "流浪者",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:vex",
+      "display": "恼鬼",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:vindicator",
+      "display": "卫道士",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:warden",
+      "display": "监守者",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:witch",
+      "display": "女巫",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:wither_skeleton",
+      "display": "凋灵骷髅",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:zoglin",
+      "display": "僵尸疣猪兽",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:zombie",
+      "display": "僵尸",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:zombie_horse",
+      "display": "僵尸马",
+      "category": "敌对生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:zombie_villager",
+      "display": "僵尸村民",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:zombified_piglin",
+      "display": "僵尸猪灵",
+      "category": "敌对生物",
+      "type": "hostile"
+    },
+    {
+      "id": "minecraft:allay",
+      "display": "悦灵",
+      "category": "被动生物",
+      "type": "mob"
+    },
+    {
+      "id": "minecraft:armadillo",
+      "display": "犰狳",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:axolotl",
+      "display": "美西螈",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:bat",
+      "display": "蝙蝠",
+      "category": "被动生物",
+      "type": "ambient"
+    },
+    {
+      "id": "minecraft:bee",
+      "display": "蜜蜂",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:camel",
+      "display": "骆驼",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:cat",
+      "display": "猫",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:chicken",
+      "display": "鸡",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:cod",
+      "display": "鳕鱼",
+      "category": "被动生物",
+      "type": "water_creature"
+    },
+    {
+      "id": "minecraft:cow",
+      "display": "牛",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:dolphin",
+      "display": "海豚",
+      "category": "被动生物",
+      "type": "water_creature"
+    },
+    {
+      "id": "minecraft:donkey",
+      "display": "驴",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:fox",
+      "display": "狐狸",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:frog",
+      "display": "青蛙",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:glow_squid",
+      "display": "发光鱿鱼",
+      "category": "被动生物",
+      "type": "water_creature"
+    },
+    {
+      "id": "minecraft:goat",
+      "display": "山羊",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:horse",
+      "display": "马",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:llama",
+      "display": "羊驼",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:mooshroom",
+      "display": "哞菇",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:mule",
+      "display": "骡",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:ocelot",
+      "display": "豹猫",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:panda",
+      "display": "熊猫",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:parrot",
+      "display": "鹦鹉",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:pig",
+      "display": "猪",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:polar_bear",
+      "display": "北极熊",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:pufferfish",
+      "display": "河豚",
+      "category": "被动生物",
+      "type": "water_creature"
+    },
+    {
+      "id": "minecraft:rabbit",
+      "display": "兔子",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:salmon",
+      "display": "鲑鱼",
+      "category": "被动生物",
+      "type": "water_creature"
+    },
+    {
+      "id": "minecraft:sheep",
+      "display": "羊",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:sniffer",
+      "display": "嗅探兽",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:squid",
+      "display": "鱿鱼",
+      "category": "被动生物",
+      "type": "water_creature"
+    },
+    {
+      "id": "minecraft:strider",
+      "display": "炽足兽",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:tadpole",
+      "display": "蝌蚪",
+      "category": "被动生物",
+      "type": "water_creature"
+    },
+    {
+      "id": "minecraft:trader_llama",
+      "display": "行商羊驼",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:tropical_fish",
+      "display": "热带鱼",
+      "category": "被动生物",
+      "type": "water_creature"
+    },
+    {
+      "id": "minecraft:turtle",
+      "display": "海龟",
+      "category": "被动生物",
+      "type": "animal"
+    },
+    {
+      "id": "minecraft:wolf",
+      "display": "狼",
+      "category": "被动生物",
+      "type": "animal"
+    }
+  ]
+}

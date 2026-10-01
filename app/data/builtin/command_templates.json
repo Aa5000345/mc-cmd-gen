@@ -1,0 +1,34 @@
+{
+  "version": "1.21.1",
+  "templates": [
+    {
+      "id": "starter_kit",
+      "name": "新手礼包",
+      "category": "小游戏",
+      "commands": [
+        "give @p minecraft:diamond_sword[minecraft:enchantments={\"minecraft:sharpness\":3}]",
+        "give @p minecraft:bread 16",
+        "effect give @p minecraft:speed 60 1"
+      ]
+    },
+    {
+      "id": "teleport_system",
+      "name": "传送点系统",
+      "category": "实用",
+      "commands": [
+        "scoreboard objectives add tp_ready dummy",
+        "execute as @a[tag=tp] at @s run tp @s ~ ~ ~"
+      ]
+    },
+    {
+      "id": "minigame_start",
+      "name": "小游戏开始",
+      "category": "小游戏",
+      "commands": [
+        "title @a title {\"text\":\"游戏开始\"}",
+        "gamemode adventure @a",
+        "clear @a"
+      ]
+    }
+  ]
+}

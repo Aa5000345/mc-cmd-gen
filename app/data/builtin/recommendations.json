@@ -1,0 +1,342 @@
+{
+  "version": "1.21.1",
+  "entities": {
+    "minecraft:zombie": [
+      {
+        "nbt": "IsBaby",
+        "type": "byte",
+        "default": "0b",
+        "desc": "是否为幼年"
+      },
+      {
+        "nbt": "CanPickUpLoot",
+        "type": "byte",
+        "default": "1b",
+        "desc": "能否捡拾物品"
+      },
+      {
+        "nbt": "CanBreakDoors",
+        "type": "byte",
+        "default": "1b",
+        "desc": "能否破坏木门"
+      },
+      {
+        "nbt": "PersistenceRequired",
+        "type": "byte",
+        "default": "1b",
+        "desc": "不会自然消失"
+      },
+      {
+        "nbt": "CustomName",
+        "type": "string",
+        "default": "\"僵尸\"",
+        "desc": "自定义名称"
+      },
+      {
+        "nbt": "Health",
+        "type": "float",
+        "default": "20.0f",
+        "desc": "生命值"
+      }
+    ],
+    "minecraft:skeleton": [
+      {
+        "nbt": "HandItems",
+        "type": "list",
+        "default": "[{\"id\":\"minecraft:bow\",\"count\":1},{}]",
+        "desc": "主手弓"
+      },
+      {
+        "nbt": "PersistenceRequired",
+        "type": "byte",
+        "default": "1b",
+        "desc": "不会自然消失"
+      },
+      {
+        "nbt": "CustomName",
+        "type": "string",
+        "default": "\"骷髅\"",
+        "desc": "自定义名称"
+      }
+    ],
+    "minecraft:creeper": [
+      {
+        "nbt": "ExplosionRadius",
+        "type": "byte",
+        "default": "3b",
+        "desc": "爆炸半径"
+      },
+      {
+        "nbt": "Fuse",
+        "type": "short",
+        "default": "30s",
+        "desc": "引燃时间（tick）"
+      },
+      {
+        "nbt": "powered",
+        "type": "byte",
+        "default": "1b",
+        "desc": "闪电形态（带电）"
+      }
+    ],
+    "minecraft:villager": [
+      {
+        "nbt": "VillagerData",
+        "type": "compound",
+        "default": "{\"level\":3,\"profession\":\"minecraft:librarian\",\"type\":\"minecraft:plains\"}",
+        "desc": "职业/等级/生物群系"
+      },
+      {
+        "nbt": "Offers",
+        "type": "compound",
+        "default": "{\"Recipes\":[]}",
+        "desc": "交易列表"
+      },
+      {
+        "nbt": "PersistenceRequired",
+        "type": "byte",
+        "default": "1b",
+        "desc": "不会消失"
+      },
+      {
+        "nbt": "CustomName",
+        "type": "string",
+        "default": "\"商人\"",
+        "desc": "自定义名称"
+      }
+    ],
+    "minecraft:item": [
+      {
+        "nbt": "Item",
+        "type": "compound",
+        "default": "{\"id\":\"minecraft:diamond\",\"count\":1}",
+        "desc": "掉落物"
+      },
+      {
+        "nbt": "PickupDelay",
+        "type": "short",
+        "default": "0s",
+        "desc": "拾取延迟（tick）"
+      },
+      {
+        "nbt": "Age",
+        "type": "short",
+        "default": "0s",
+        "desc": "存活时间（-32768 为不消失）"
+      }
+    ],
+    "minecraft:armor_stand": [
+      {
+        "nbt": "ShowArms",
+        "type": "byte",
+        "default": "1b",
+        "desc": "显示手臂"
+      },
+      {
+        "nbt": "Invisible",
+        "type": "byte",
+        "default": "1b",
+        "desc": "隐形"
+      },
+      {
+        "nbt": "NoGravity",
+        "type": "byte",
+        "default": "1b",
+        "desc": "无重力"
+      },
+      {
+        "nbt": "Pose",
+        "type": "compound",
+        "default": "{\"LeftArm\":[0f,0f,0f]}",
+        "desc": "姿势"
+      }
+    ],
+    "minecraft:ender_dragon": [
+      {
+        "nbt": "DragonPhase",
+        "type": "int",
+        "default": "0",
+        "desc": "末影龙阶段"
+      },
+      {
+        "nbt": "Silent",
+        "type": "byte",
+        "default": "1b",
+        "desc": "静音"
+      }
+    ],
+    "minecraft:wither": [
+      {
+        "nbt": "Invulnerable",
+        "type": "byte",
+        "default": "1b",
+        "desc": "无敌"
+      }
+    ]
+  },
+  "items": {
+    "minecraft:diamond_sword": [
+      {
+        "component": "minecraft:enchantments",
+        "default": "{\"levels\":{\"minecraft:sharpness\":5}}",
+        "desc": "附魔 — 锋利 V"
+      },
+      {
+        "component": "minecraft:custom_name",
+        "default": "\"神剑\"",
+        "desc": "自定义名称"
+      },
+      {
+        "component": "minecraft:lore",
+        "default": "[\"传说中的武器\"]",
+        "desc": "描述"
+      },
+      {
+        "component": "minecraft:unbreakable",
+        "default": "1b",
+        "desc": "无法破坏"
+      },
+      {
+        "component": "minecraft:attribute_modifiers",
+        "default": "[{\"type\":\"minecraft:attack_damage\",\"amount\":5.0,\"operation\":\"add_value\",\"slot\":\"mainhand\",\"id\":\"mccmdgen:atk\"}]",
+        "desc": "攻击力 +5"
+      }
+    ],
+    "minecraft:netherite_sword": [
+      {
+        "component": "minecraft:enchantments",
+        "default": "{\"levels\":{\"minecraft:sharpness\":5,\"minecraft:fire_aspect\":2}}",
+        "desc": "锋利 V + 火焰附加 II"
+      },
+      {
+        "component": "minecraft:unbreakable",
+        "default": "1b",
+        "desc": "无法破坏"
+      }
+    ],
+    "minecraft:bow": [
+      {
+        "component": "minecraft:enchantments",
+        "default": "{\"levels\":{\"minecraft:power\":5,\"minecraft:infinity\":1}}",
+        "desc": "力量 V + 无限"
+      },
+      {
+        "component": "minecraft:unbreakable",
+        "default": "1b",
+        "desc": "无法破坏"
+      }
+    ],
+    "minecraft:elytra": [
+      {
+        "component": "minecraft:unbreakable",
+        "default": "1b",
+        "desc": "无法破坏"
+      },
+      {
+        "component": "minecraft:enchantments",
+        "default": "{\"levels\":{\"minecraft:unbreaking\":3}}",
+        "desc": "耐久 III"
+      }
+    ],
+    "minecraft:diamond_helmet": [
+      {
+        "component": "minecraft:enchantments",
+        "default": "{\"levels\":{\"minecraft:protection\":4,\"minecraft:unbreaking\":3}}",
+        "desc": "保护 IV + 耐久 III"
+      },
+      {
+        "component": "minecraft:trim",
+        "default": "{\"material\":\"minecraft:gold\",\"pattern\":\"minecraft:silence\"}",
+        "desc": "盔甲纹饰"
+      }
+    ],
+    "minecraft:potion": [
+      {
+        "component": "minecraft:potion_contents",
+        "default": "{\"potion\":\"minecraft:strong_healing\"}",
+        "desc": "药水内容 — 强效治疗"
+      },
+      {
+        "component": "minecraft:custom_name",
+        "default": "\"治疗药水\"",
+        "desc": "自定义名称"
+      }
+    ],
+    "minecraft:enchanted_golden_apple": [
+      {
+        "component": "minecraft:custom_name",
+        "default": "\"附魔金苹果\"",
+        "desc": "自定义名称"
+      },
+      {
+        "component": "minecraft:rarity",
+        "default": "epic",
+        "desc": "稀有度 — 史诗"
+      }
+    ],
+    "minecraft:*:sword": [
+      {
+        "component": "minecraft:enchantments",
+        "default": "{\"levels\":{\"minecraft:sharpness\":5}}",
+        "desc": "通用 — 锋利 V"
+      }
+    ],
+    "minecraft:*:pickaxe": [
+      {
+        "component": "minecraft:enchantments",
+        "default": "{\"levels\":{\"minecraft:efficiency\":5,\"minecraft:fortune\":3}}",
+        "desc": "通用 — 效率 V + 时运 III"
+      }
+    ]
+  },
+  "commands": {
+    "summon": [
+      {
+        "snippet": "summon minecraft:zombie ~ ~ ~ {IsBaby:1b}",
+        "desc": "生成幼年僵尸"
+      },
+      {
+        "snippet": "summon minecraft:armor_stand ~ ~ ~ {ShowArms:1b,Invisible:1b}",
+        "desc": "生成隐形盔甲架"
+      }
+    ],
+    "give": [
+      {
+        "snippet": "give @p minecraft:diamond_sword[minecraft:enchantments={\"minecraft:sharpness\":5}]",
+        "desc": "给最近的玩家一把锋利 V 钻石剑"
+      },
+      {
+        "snippet": "give @a minecraft:golden_apple 64",
+        "desc": "给全体玩家 64 个金苹果"
+      }
+    ],
+    "execute": [
+      {
+        "snippet": "execute as @a at @s run say hi",
+        "desc": "每个玩家各自发出 hi"
+      },
+      {
+        "snippet": "execute if block ~ ~-1 ~ minecraft:stone run say 站在石头上",
+        "desc": "踩在石头上时提示"
+      }
+    ],
+    "setblock": [
+      {
+        "snippet": "setblock ~ ~-1 ~ minecraft:stone",
+        "desc": "脚下放一块石头"
+      }
+    ],
+    "fill": [
+      {
+        "snippet": "fill ~-5 ~-1 ~-5 ~5 ~-1 ~5 minecraft:stone",
+        "desc": "铺 11×11 地板"
+      }
+    ],
+    "effect": [
+      {
+        "snippet": "effect give @p minecraft:speed 30 1",
+        "desc": "给最近玩家 30s 速度 II"
+      }
+    ]
+  }
+}

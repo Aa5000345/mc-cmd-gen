@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcstudio"
+version = "2.0.0"
+description = "MCStudio（MC 工坊）— Minecraft Java 1.21.1 命令生成器与世界 / NBT 编辑器"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["PySide6>=6.6.0", "nbtlib>=2.0.0"]
+keywords = ["minecraft", "nbt", "command", "world", "level.dat", "pyside6"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Games/Entertainment",
+    "Environment :: X11 Applications :: Qt",
+]
+
+[project.scripts]
+# 新名字
+mcstudio = "main:main"
+# 旧名字保留（老脚本不会失效）
+mc-cmd-gen = "main:main"
+
+[tool.setuptools]
+py-modules = ["main", "mcgen", "mcstudio"]
+packages = [
+    "app",
+    "app.core",
+    "app.core.builders",
+    "app.core.nbt_binary",
+    "app.core.nlp",
+    "app.data",
+    "app.storage",
+    "app.ui",
+    "app.ui.dialogs",
+    "app.ui.graph",
+    "app.ui.shell",
+    "app.ui.widgets",
+]
+
+[tool.setuptools.package-data]
+"app.data" = ["builtin/*.json"]
+"app.core.nlp" = ["*.json"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["F", "E9", "B", "SIM", "C4", "RET"]
+# SIM105/SIM102/SIM117：显式 try/except/pass、嵌套 if、subTest+assertRaises
+# 在这里可读性更好，且便于写注释说明意图
+ignore = ["E501", "SIM105", "SIM102", "SIM117"]
+
+[tool.ruff.lint.per-file-ignores]
+# 这些 __init__ 是"再导出"入口，导入即公开 API
+"app/core/__init__.py" = ["F401"]
+"app/ui/dialogs/__init__.py" = ["F401"]
+"app/ui/widgets/__init__.py" = ["F401"]
+# mcstudio.py 是有意为之的兼容入口（转手给 mcgen）
+"mcstudio.py" = ["F401"]
+"tests/*" = ["F401"]

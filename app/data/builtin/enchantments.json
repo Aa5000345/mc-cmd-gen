@@ -1,0 +1,263 @@
+{
+  "version": "1.21.1",
+  "note": "附魔 ID → 中文名与最大等级，共 43 条。",
+  "enchantments": [
+    {
+      "id": "minecraft:smite",
+      "display": "亡灵杀手",
+      "max": 5,
+      "category": "武器"
+    },
+    {
+      "id": "minecraft:protection",
+      "display": "保护",
+      "max": 4,
+      "category": "盔甲"
+    },
+    {
+      "id": "minecraft:frost_walker",
+      "display": "冰霜行者",
+      "max": 2,
+      "category": "靴子"
+    },
+    {
+      "id": "minecraft:punch",
+      "display": "冲击",
+      "max": 2,
+      "category": "弓"
+    },
+    {
+      "id": "minecraft:knockback",
+      "display": "击退",
+      "max": 2,
+      "category": "武器"
+    },
+    {
+      "id": "minecraft:power",
+      "display": "力量",
+      "max": 5,
+      "category": "弓"
+    },
+    {
+      "id": "minecraft:multishot",
+      "display": "多重射击",
+      "max": 1,
+      "category": "弩"
+    },
+    {
+      "id": "minecraft:channeling",
+      "display": "引雷",
+      "max": 1,
+      "category": "三叉戟"
+    },
+    {
+      "id": "minecraft:projectile_protection",
+      "display": "弹射物保护",
+      "max": 4,
+      "category": "盔甲"
+    },
+    {
+      "id": "minecraft:loyalty",
+      "display": "忠诚",
+      "max": 3,
+      "category": "三叉戟"
+    },
+    {
+      "id": "minecraft:quick_charge",
+      "display": "快速装填",
+      "max": 3,
+      "category": "弩"
+    },
+    {
+      "id": "minecraft:looting",
+      "display": "抢夺",
+      "max": 3,
+      "category": "武器"
+    },
+    {
+      "id": "minecraft:feather_falling",
+      "display": "摔落缓冲",
+      "max": 4,
+      "category": "盔甲"
+    },
+    {
+      "id": "minecraft:efficiency",
+      "display": "效率",
+      "max": 5,
+      "category": "工具"
+    },
+    {
+      "id": "minecraft:infinity",
+      "display": "无限",
+      "max": 1,
+      "category": "弓"
+    },
+    {
+      "id": "minecraft:fortune",
+      "display": "时运",
+      "max": 3,
+      "category": "工具"
+    },
+    {
+      "id": "minecraft:sweeping_edge",
+      "display": "横扫之刃",
+      "max": 3,
+      "category": "武器"
+    },
+    {
+      "id": "minecraft:sweeping",
+      "display": "横扫之刃",
+      "max": 1
+    },
+    {
+      "id": "minecraft:respiration",
+      "display": "水下呼吸",
+      "max": 3,
+      "category": "头盔"
+    },
+    {
+      "id": "minecraft:aqua_affinity",
+      "display": "水下速掘",
+      "max": 1,
+      "category": "头盔"
+    },
+    {
+      "id": "minecraft:luck_of_the_sea",
+      "display": "海之眷顾",
+      "max": 3,
+      "category": "钓鱼"
+    },
+    {
+      "id": "minecraft:vanishing_curse",
+      "display": "消失诅咒",
+      "max": 1,
+      "category": "诅咒"
+    },
+    {
+      "id": "minecraft:depth_strider",
+      "display": "深海探索者",
+      "max": 3,
+      "category": "靴子"
+    },
+    {
+      "id": "minecraft:riptide",
+      "display": "激流",
+      "max": 3,
+      "category": "三叉戟"
+    },
+    {
+      "id": "minecraft:fire_protection",
+      "display": "火焰保护",
+      "max": 4,
+      "category": "盔甲"
+    },
+    {
+      "id": "minecraft:fire_aspect",
+      "display": "火焰附加",
+      "max": 2,
+      "category": "武器"
+    },
+    {
+      "id": "minecraft:flame",
+      "display": "火矢",
+      "max": 1,
+      "category": "弓"
+    },
+    {
+      "id": "minecraft:soul_speed",
+      "display": "灵魂疾行",
+      "max": 3,
+      "category": "靴子"
+    },
+    {
+      "id": "minecraft:blast_protection",
+      "display": "爆炸保护",
+      "max": 4,
+      "category": "盔甲"
+    },
+    {
+      "id": "minecraft:breach",
+      "display": "破甲",
+      "max": 4,
+      "category": "武器"
+    },
+    {
+      "id": "minecraft:impaling",
+      "display": "穿刺",
+      "max": 5,
+      "category": "三叉戟"
+    },
+    {
+      "id": "minecraft:piercing",
+      "display": "穿透",
+      "max": 4,
+      "category": "弩"
+    },
+    {
+      "id": "minecraft:silk_touch",
+      "display": "精准采集",
+      "max": 1,
+      "category": "工具"
+    },
+    {
+      "id": "minecraft:mending",
+      "display": "经验修补",
+      "max": 1,
+      "category": "通用"
+    },
+    {
+      "id": "minecraft:binding_curse",
+      "display": "绑定诅咒",
+      "max": 1,
+      "category": "诅咒"
+    },
+    {
+      "id": "minecraft:unbreaking",
+      "display": "耐久",
+      "max": 3,
+      "category": "通用"
+    },
+    {
+      "id": "minecraft:density",
+      "display": "致密",
+      "max": 5,
+      "category": "武器"
+    },
+    {
+      "id": "minecraft:bane_of_arthropods",
+      "display": "节肢杀手",
+      "max": 5,
+      "category": "武器"
+    },
+    {
+      "id": "minecraft:thorns",
+      "display": "荆棘",
+      "max": 3,
+      "category": "盔甲"
+    },
+    {
+      "id": "minecraft:swift_sneak",
+      "display": "迅捷潜行",
+      "max": 3,
+      "category": "护腿"
+    },
+    {
+      "id": "minecraft:sharpness",
+      "display": "锋利",
+      "max": 5,
+      "category": "武器"
+    },
+    {
+      "id": "minecraft:wind_burst",
+      "display": "风爆",
+      "max": 3,
+      "category": "武器"
+    },
+    {
+      "id": "minecraft:lure",
+      "display": "饵钓",
+      "max": 3,
+      "category": "钓鱼"
+    }
+  ]
+}

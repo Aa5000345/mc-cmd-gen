@@ -1,0 +1,44 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---- 构建产物 ----
+build/
+dist/
+*.spec
+.run/
+
+# ---- 运行时数据（不应提交） ----
+*.db
+*.db-wal
+*.db-shm
+*.log
+build/nbt/
+tools/out/
+
+# ---- 编辑器 / 系统 ----
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 本地备份与临时文件 ----
+.backup-pre-fix/
+*.orig
+*.rej
+*~
+_probe_*

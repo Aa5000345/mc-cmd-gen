@@ -1,0 +1,79 @@
+{
+  "version": "1.21.1",
+  "note": "「物品处方」：一次把常用组件组合应用到物品上。components 为组件块文本，count 为数量（可省略）。",
+  "presets": [
+    {
+      "id": "sword.sharp5",
+      "name": "锋利 V 神剑",
+      "category": "武器",
+      "item": "minecraft:diamond_sword",
+      "count": 1,
+      "components": "[minecraft:custom_name=\"神剑\",minecraft:enchantments={\"levels\":{\"minecraft:sharpness\":5,\"minecraft:mending\":1,\"minecraft:unbreaking\":3}},minecraft:attribute_modifiers=[{\"type\":\"minecraft:attack_damage\",\"amount\":2.0,\"operation\":\"add_value\",\"slot\":\"mainhand\",\"id\":\"mcgen:sword_bonus\"}]]"
+    },
+    {
+      "id": "tool.unbreakable",
+      "name": "无法破坏的效率镐",
+      "category": "工具",
+      "item": "minecraft:netherite_pickaxe",
+      "components": "[minecraft:unbreakable=1b,minecraft:custom_name=\"永不磨损\",minecraft:enchantments={\"levels\":{\"minecraft:efficiency\":5,\"minecraft:fortune\":3}}]"
+    },
+    {
+      "id": "armor.full",
+      "name": "合金战甲（荆棘+保护）",
+      "category": "盔甲",
+      "item": "minecraft:netherite_chestplate",
+      "components": "[minecraft:custom_name=\"龙鳞胸甲\",minecraft:enchantments={\"levels\":{\"minecraft:protection\":4,\"minecraft:thorns\":3,\"minecraft:unbreaking\":3}},minecraft:trim={\"material\":\"minecraft:gold\",\"pattern\":\"minecraft:silence\"}]"
+    },
+    {
+      "id": "potion.healing",
+      "name": "瞬间治疗 II 药水",
+      "category": "药水",
+      "item": "minecraft:potion",
+      "components": "[minecraft:potion_contents={potion:\"minecraft:strong_healing\"},minecraft:custom_name=\"救命药水\"]"
+    },
+    {
+      "id": "book.enchanted",
+      "name": "附魔书（经验修补）",
+      "category": "书",
+      "item": "minecraft:enchanted_book",
+      "components": "[minecraft:stored_enchantments={\"levels\":{\"minecraft:mending\":1}}]"
+    },
+    {
+      "id": "food.god_apple",
+      "name": "超级金苹果",
+      "category": "食物",
+      "item": "minecraft:golden_apple",
+      "count": 8,
+      "components": "[minecraft:food={nutrition:20,saturation:20.0,\"can_always_eat\":1b},minecraft:custom_name=\"神的食物\"]"
+    },
+    {
+      "id": "shulker.kit",
+      "name": "新手补给箱",
+      "category": "容器",
+      "item": "minecraft:shulker_box",
+      "components": "[minecraft:custom_name=\"新手礼包\",minecraft:container=[{slot:0,item:{id:\"minecraft:bread\",count:16}},{slot:1,item:{id:\"minecraft:stone_sword\",count:1}},{slot:2,item:{id:\"minecraft:torch\",count:64}}]]"
+    },
+    {
+      "id": "misc.head",
+      "name": "玩家头颅（Notch）",
+      "category": "装饰",
+      "item": "minecraft:player_head",
+      "components": "[minecraft:profile={name:\"Notch\"}]"
+    },
+    {
+      "id": "misc.rename",
+      "name": "重命名物品（占位符）",
+      "category": "装饰",
+      "item": "minecraft:diamond",
+      "components": "[minecraft:custom_name=\"{名称}\"]"
+    },
+    {
+      "id": "misc.stack99",
+      "name": "可堆叠 99 的方块",
+      "category": "杂项",
+      "item": "minecraft:stone",
+      "count": 99,
+      "components": "[minecraft:max_stack_size=99]"
+    }
+  ]
+}
