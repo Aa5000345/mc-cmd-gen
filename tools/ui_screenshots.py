@@ -1,4 +1,4 @@
-"""离屏截图工具：把 MCStudio 主窗口的关键页面抓成 PNG，用于 UI 走查。
+﻿"""离屏截图工具：把 MCStudio 主窗口的关键页面抓成 PNG，用于 UI 走查。
 
 用法:
     python build/shot.py            # 干净首启 + 载入测试存档
@@ -29,7 +29,7 @@ os.environ["MCSTUDIO_NO_MIGRATE"] = "1"
 OUT = ROOT / "build" / "shots"
 OUT.mkdir(parents=True, exist_ok=True)
 
-from PySide6.QtGui import QFontDatabase  # noqa: E402
+from PySide6.QtGui import QFont, QFontDatabase     # noqa: E402
 from PySide6.QtWidgets import QApplication  # noqa: E402
 
 from app.ui.main_window import MainWindow  # noqa: E402
@@ -38,11 +38,20 @@ TAG = os.environ.get("SHOT_TAG", "")
 
 
 def load_fonts() -> None:
-    """离屏模式下 Qt 找不到字体目录，手动加载系统中文与等宽字体。"""
+    """离屏模式下 Qt 找不到字体目录，手动加载系统中文 / 等宽 / 符号字体。"""
     for pat in (r"C:\Windows\Fonts\msyh.ttc", r"C:\Windows\Fonts\msyhbd.ttc",
-                r"C:\Windows\Fonts\simhei.ttf", r"C:\Windows\Fonts\consola.ttf"):
+                r"C:\Windows\Fonts\simhei.ttf", r"C:\Windows\Fonts\consola.ttf",
+                r"C:\Windows\Fonts\seguisym.ttf", r"C:\Windows\Fonts\segoeui.ttf"):
         for path in glob.glob(pat):
             QFontDatabase.addApplicationFont(path)
+    # 显式回退链：中文字体缺 ▾ ✔ ▶ 时用 Segoe UI Symbol 兜底，否则截图里是方框
+    app = QApplication.instance()
+    if app is not None:
+        base = QFont("Microsoft YaHei UI")
+        base.setFamilies(["Microsoft YaHei UI", "Microsoft YaHei",
+                          "Segoe UI Symbol", "Segoe UI", "Consolas"])
+        base.setPointSize(9)
+        app.setFont(base)
 
 
 def pump(app, n: int = 12) -> None:
