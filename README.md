@@ -159,7 +159,8 @@ selected_container / selected_map`，显示在联动总线抽屉与状态栏右�
 
 > 完整的「问题 → 修法 → 验证」清单见 [docs/ui-redesign-2.1.md](docs/ui-redesign-2.1.md)；
 > 前后对比截图在 `build/shots-before/`（旧）与 `build/shots/`（新），
-> 用 `python build/shot.py` 可重新生成（离屏，不需要显示器）。
+> 用 `python tools/ui_screenshots.py` 可重新生成（离屏，不需要显示器）；
+> `python tools/ui_smoke.py` 会把主窗口里能点的东西全点一遍，检查有没有「点了才崩」。
 
 ### 新增快捷键
 

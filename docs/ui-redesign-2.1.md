@@ -130,7 +130,10 @@ python -m pytest -q                      # 856 passed
 python -m pytest tests/test_shell_ui.py tests/test_world_ux.py -q
 
 # 生成前后对比截图（离屏，不需要显示器）
-python build/shot.py                     # 输出 build/shots/
+python tools/ui_screenshots.py           # 输出 build/shots/
+
+# UI 冒烟：把主窗口能点的东西全点一遍，抓「点了才崩」的问题
+python tools/ui_smoke.py
 ```
 
 截图对照表（`build/shots-before/` ← 旧，`build/shots/` → 新）：
